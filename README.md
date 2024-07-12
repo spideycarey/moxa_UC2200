@@ -55,9 +55,10 @@ Setup for Moxa UC-2200 to make base configuration
    7. Type `sudo unzip /home/fieldsupport/Ignition-Edge-linux-aarch-64-8.1.42.zip -d /usr/local/bin/ignition` to unzip and install
    8. Type `sudo rm /home/fieldsupport/Ignition-Edge-linux-aarch-64-8.1.42.zip` to remove file
    9. Type `cd /usr/local/bin/ignition`
-   10. Type `sudo chmod +x *.sh` to make all ignition scripts executable
-   11. Type `sudo ./ignition.sh install` To install as a system service that auto-starts Ignition on system boo
-   12. Type `sudo ./ignition.sh start` to start the ignition gateway
+   10. Type `sudo chmod +x ignition-gateway` to make all ignition scripts executable
+   11. Type `sudo chmod +x *.sh` to make all ignition scripts executable
+   12. Type `sudo ./ignition.sh install` To install as a system service that auto-starts Ignition on system boo
+   13. Type `sudo ./ignition.sh start` to start the ignition gateway
    
 10. Ignition Edge initial commission and modules
    1. Open a web browser and navigate to `http://192.168.4.127:8088`
