@@ -42,26 +42,18 @@ Setup for Moxa UC-2200 to make base configuration
    5. Type `sudo timedatectl set-timezone America/Edmonton`
    6. Type `sudo apt purge ntp`
    7. Type `sudo reboot`
-   
-8. Install Moxa Ignition DEB packages (Must be in the order below)
-   These packages are installed so when the edge device reboots, the license key is not lost
-   1. Using a FTP/SSH software, copy below files from PC to device
-      - Copy files to `/home/edgeadmin`
-   2. Type `sudo dpkg -i /home/edgeadmin/uc8200-modules_4.4.176+1.0.11+tpmi1_armhf.deb`
-   3. Type `sudo dpkg -i /home/edgeadmin/uc8200-kernel_4.4.176+1.0.11+tpmi1_armhf.deb`
-   4. Type `sudo reboot`
 
 9. Install Ignition Edge
    These instructions are based of the Readme file included in the install
-   1. (No longer required) Type `sudo mkdir /usr/local/bin/ignition` to create the Ignition directory
+   1. Type `sudo mkdir /usr/local/bin/ignition` to create the Ignition directory
    2. Type `sudo chown edgeadmin /usr/local/bin/ignition` to set the owner of the directory
    3. Using a FTP/SSH software, copy Ignition Edge install from PC to device
       - Copy Ignition Edge install to `/home/edgeadmin`
    4. Type `sudo apt-get update` to get and apply updates to device
    5. Type `sudo apt-get install unzip` to install WinZip on device
-   6. Type `sudo apt install binutils` to install readelf utility on device (To prevent error messages on startup with ignition)
-   7. Type `sudo unzip /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.21.zip -d /usr/local/bin/ignition` to unzip and install
-   8. Type `sudo rm /home/edgeadmin/Ignition-Edge-linux-armhf-32-8.1.21.zip` to remove file
+   6. needed ???? Type `sudo apt install binutils` to install readelf utility on device (To prevent error messages on startup with ignition)
+   7. Type `sudo unzip /home/fieldsupport/Ignition-Edge-linux-aarch-64-8.1.42.zip -d /usr/local/bin/ignition` to unzip and install
+   8. Type `sudo rm /home/fieldsupport/Ignition-Edge-linux-aarch-64-8.1.42.zip` to remove file
    9. Type `cd /usr/local/bin/ignition`
    10. Type `sudo chmod +x *.sh` to make all ignition scripts executable
    11. Type `sudo ./ignition.sh install` To install as a system service that auto-starts Ignition on system boo
