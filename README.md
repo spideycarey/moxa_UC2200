@@ -46,9 +46,9 @@ Setup for Moxa UC-2200 to make base configuration
 9. Install Ignition Edge
    These instructions are based of the Readme file included in the install
    1. Type `sudo mkdir /usr/local/bin/ignition` to create the Ignition directory
-   2. Type `sudo chown edgeadmin /usr/local/bin/ignition` to set the owner of the directory
+   2. Type `sudo chown fieldsupport /usr/local/bin/ignition` to set the owner of the directory
    3. Using a FTP/SSH software, copy Ignition Edge install from PC to device
-      - Copy Ignition Edge install to `/home/edgeadmin`
+      - Copy Ignition Edge install to `/home/fieldsupport`
    4. Type `sudo apt-get update` to get and apply updates to device
    5. Type `sudo apt-get install unzip` to install WinZip on device
    6. needed ???? Type `sudo apt install binutils` to install readelf utility on device (To prevent error messages on startup with ignition)
